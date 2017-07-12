@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 
 const vendingMachineSchema = new mongoose.Schema({
-  status: Boolean
-  price: Number,
-  quantity: Number,
-  description: String,
-  transaction: Date
-})
+
+    id: Number,
+    description: String,
+    quantity: Number,
+    price: Number,
+
+},{timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }})
 
 const VendingMachine = mongoose.model("VendingMachine", vendingMachineSchema);
 
